@@ -1,6 +1,6 @@
 ## Purpose:
 
-This project collects custom visualizations I have developed, to help me make sense of the data I encounter. I try to meet the following principles when I produce such examples:
+This project collects custom visualizations and tools I have developed, to help me make sense of the data I encounter. I try to meet the following principles when I produce such examples:
 
 1) Maximal Information Density (for datums in plot).
 
@@ -10,6 +10,7 @@ This project collects custom visualizations I have developed, to help me make se
 
 4) Image generation method should be sufficiently generalized, to be used in a wide variety of contexts.
 
+5) Simple, one line functional calls to initialize the tool/generate the visualization. Proper software design for each function, to allow for flexibility and robustness. read: error checking, and sensible defaults.
 
 
 ## BoxplotBlast() Example:
@@ -32,5 +33,14 @@ We can see clearly in the example below, that some data for a given day is compl
 ![timegaps][timeblocks]
 
 
+## View All Data Frames in a Given Directory:
+
+
+Often times, our data set consists of an unzipped folder with many CSV files. The *headtailcsv()* takes a path as an argument, and auto-detects all CSVs in the given directory. For each dataframe, it pulls the head, tail, and samples random rows from the interior of the dataframe, and display()'s the sample of the dataframe to console. This allows a user to quickly inspect all the data very quickly, in one shot. 
+
+![dataframes][dfimg]
+
+
 [bpb]: /web/img/bpblast.png
 [timeblocks]: /web/img/timegaps.png
+[dfimg]: /web/img/dfoutput.png
